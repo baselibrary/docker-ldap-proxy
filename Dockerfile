@@ -2,8 +2,10 @@ FROM ubuntu:16.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-ENV LDAP_URI="ldap://ldap.thoughtworks.io:389"
-ENV LDAP_SUFFIX="DC=corporate,DC=thoughtworks,DC=com"
+ENV LDAP_BASE_DN="DC=thoughtworks,DC=io"
+ENV LDAP_ROOT_DN="CN=admin,DC=thoughtworks,DC=io"
+ENV LDAP_ROOT_PW="password"
+ENV LDAP_BIND_URI="ldap://ldap.thoughtworks.io:389"
 ENV LDAP_BIND_DN="CN=yourname,OU=Xian,OU=Employees,OU=Enterprise,OU=Principal,DC=corporate,DC=thoughtworks,DC=com"
 ENV LDAP_BIND_PW="yourpassword"
 
