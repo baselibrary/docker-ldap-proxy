@@ -1,8 +1,8 @@
 /***********************************************************************
  * Constants
  ***********************************************************************/
-def image    = "baselibrary/baseimage"
-def registry = "thoughtworks.io"
+def image    = "baselibrary/ldap-proxy"
+def registry = "registry.thoughtworks.io"
 
 /***********************************************************************
  * Build code
@@ -10,7 +10,7 @@ def registry = "thoughtworks.io"
 
 node('docker') {
   stage 'build'
-    dockerImage = docker.build("16.04")
+    dockerImage = docker.build("1.0.0")
     docker.withRegistry("https://${registry}", 'registry-login') {
       dockerImage.push()
       dockerImage.push("latest")

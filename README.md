@@ -1,19 +1,14 @@
-## ThoughtWorks Docker Image: baseimage
-
-[![](http://dockeri.co/image/baselibrary/baseimage)](https://registry.hub.docker.com/u/baselibrary/baseimage/)
+## ThoughtWorks Docker Image: ldap-proxy
 
 ### Base Docker Image
 
-* `latest`: baseimage 2.0.0
-* `2.0.0` : baseimage 2.0.0 (ubuntu 16.04)
-* `1.0.0` : baseimage 1.0.0 (ubuntu 14.04)
+* `latest`: ldap-proxy 1.0.0
+* `1.0.0` : ldap-proxy 1.0.0 (ubuntu 14.04)
 
 ### Installation
 
-    docker pull baselibrary/baseimage
+    docker pull baselibrary/ldap-proxy
 
 ### Usage
 
-    docker run -it --rm baselibrary/baseimage
-
-    docker run -it --rm baselibrary/baseimage /bin/bash
+    docker run -d -p 389:389 -e LDAP_BIND_DN="CN=yourname,DC=thoughtworks,DC=com" -e LDAP_BIND_PW="yourpassword" baselibrary/ldap-proxy:1.0.0

@@ -1,7 +1,7 @@
-NAME     = foundation/openldap
-REPO     = git@github.com:baselibrary/docker-nexus.git
+NAME     = baselibrary/ldap-proxy
+REPO     = git@github.com:baselibrary/docker-ldap-proxy.git
 REGISTRY = thoughtworks.io
-TAG      = 4.1.6
+TAG      = 1.0.0
 
 all: build
 
