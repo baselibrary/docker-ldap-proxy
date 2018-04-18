@@ -1,6 +1,4 @@
-FROM ubuntu:16.04
-
-ENV DEBIAN_FRONTEND=noninteractive
+FROM baselibrary/baseimage:2.0.0
 
 ENV LDAP_BASE_DN="DC=thoughtworks,DC=io"
 ENV LDAP_ROOT_DN="CN=admin,DC=thoughtworks,DC=io"
