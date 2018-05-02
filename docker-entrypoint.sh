@@ -17,12 +17,14 @@ if [ "$1" = 'slapd' ]; then
   echo "initialize:"
   echo "========================================================================"
 
-  sed -i "s|{{ LDAP_BASE_DN }}|${LDAP_BASE_DN}|g"   /etc/ldap/ldap.conf
-  sed -i "s|{{ LDAP_ROOT_DN }}|${LDAP_ROOT_DN}|g"   /etc/ldap/ldap.conf
-  sed -i "s|{{ LDAP_ROOT_PW }}|${LDAP_ROOT_PW}|g"   /etc/ldap/ldap.conf
-  sed -i "s|{{ LDAP_BIND_URI }}|${LDAP_BIND_URI}|g" /etc/ldap/ldap.conf
-  sed -i "s|{{ LDAP_BIND_DN }}|${LDAP_BIND_DN}|g"   /etc/ldap/ldap.conf
-  sed -i "s|{{ LDAP_BIND_PW }}|${LDAP_BIND_PW}|g"   /etc/ldap/ldap.conf
+  sed -i "s|{{ LDAP_SUFFIX }}|${LDAP_SUFFIX}|g"             /etc/ldap/ldap.conf
+  sed -i "s|{{ LDAP_ROOT_DN }}|${LDAP_ROOT_DN}|g"             /etc/ldap/ldap.conf
+  sed -i "s|{{ LDAP_ROOT_PW }}|${LDAP_ROOT_PW}|g"             /etc/ldap/ldap.conf
+  sed -i "s|{{ LDAP_SOURCE_SUFFIX }}|${LDAP_SOURCE_SUFFIX}|g" /etc/ldap/ldap.conf
+  sed -i "s|{{ LDAP_TARGET_SUFFIX }}|${LDAP_TARGET_SUFFIX}|g" /etc/ldap/ldap.conf
+  sed -i "s|{{ LDAP_BIND_URI }}|${LDAP_BIND_URI}|g"           /etc/ldap/ldap.conf
+  sed -i "s|{{ LDAP_BIND_DN }}|${LDAP_BIND_DN}|g"             /etc/ldap/ldap.conf
+  sed -i "s|{{ LDAP_BIND_PW }}|${LDAP_BIND_PW}|g"             /etc/ldap/ldap.conf
 
   ##### run scripts  #####
   echo "========================================================================"

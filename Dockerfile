@@ -1,9 +1,11 @@
 FROM baselibrary/baseimage:2.0.0
 
-ENV LDAP_BASE_DN="DC=thoughtworks,DC=io"
-ENV LDAP_ROOT_DN="CN=admin,DC=thoughtworks,DC=io"
+ENV LDAP_SUFFIX="DC=thoughtworks,DC=io"
+ENV LDAP_ROOT_DN="admin"
 ENV LDAP_ROOT_PW="password"
-ENV LDAP_BIND_URI="ldap://ldap.thoughtworks.io:389"
+ENV LDAP_SOURCE_SUFFIX="OU=Employees,OU=Enterprise,OU=Principal,DC=corporate,DC=thoughtworks,DC=com"
+ENV LDAP_TARGET_SUFFIX="OU=Users,$LDAP_SUFFIX"
+ENV LDAP_BIND_URI="ldap://ldap.thoughtworks.io:389/$LDAP_TARGET_SUFFIX"
 ENV LDAP_BIND_DN="CN=yourname,OU=Xian,OU=Employees,OU=Enterprise,OU=Principal,DC=corporate,DC=thoughtworks,DC=com"
 ENV LDAP_BIND_PW="yourpassword"
 
