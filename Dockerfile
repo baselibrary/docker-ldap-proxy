@@ -1,13 +1,13 @@
 FROM baselibrary/baseimage:2.0.0
 
 ENV LDAP_SUFFIX="DC=thoughtworks,DC=io"
-ENV LDAP_ROOT_DN="CN=admin,DC=thoughtworks,DC=io"
-ENV LDAP_ROOT_PW="password"
-ENV LDAP_SOURCE_SUFFIX="OU=Employees,OU=Enterprise,OU=Principal,DC=corporate,DC=thoughtworks,DC=com"
-ENV LDAP_TARGET_SUFFIX="OU=Users,DC=thoughtworks,DC=io"
-ENV LDAP_BIND_URI="ldap://ldap.thoughtworks.io:389/OU=Users,DC=thoughtworks,DC=io"
-ENV LDAP_BIND_DN="CN=yourname,OU=Xian,OU=Employees,OU=Enterprise,OU=Principal,DC=corporate,DC=thoughtworks,DC=com"
-ENV LDAP_BIND_PW="yourpassword"
+ENV LDAP_ADMIN_DN="CN=admin,DC=thoughtworks,DC=io"
+ENV LDAP_ADMIN_PW="password"
+ENV LDAP_PROXY_URI="ldap://ldap.thoughtworks.io:389/OU=Users,DC=thoughtworks,DC=io"
+ENV LDAP_PROXY_SOURCE="OU=Employees,OU=Enterprise,OU=Principal,DC=corporate,DC=thoughtworks,DC=com"
+ENV LDAP_PROXY_TARGET="OU=Users,DC=thoughtworks,DC=io"
+ENV LDAP_PROXY_DN="CN=yourname,OU=Xian,OU=Employees,OU=Enterprise,OU=Principal,DC=corporate,DC=thoughtworks,DC=com"
+ENV LDAP_PROXY_PW="yourpassword"
 
 RUN \
   apt-get update &&\

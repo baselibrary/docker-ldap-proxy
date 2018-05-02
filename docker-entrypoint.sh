@@ -18,13 +18,13 @@ if [ "$1" = 'slapd' ]; then
   echo "========================================================================"
 
   sed -i "s|{{ LDAP_SUFFIX }}|${LDAP_SUFFIX}|g"             /etc/ldap/ldap.conf
-  sed -i "s|{{ LDAP_ROOT_DN }}|${LDAP_ROOT_DN}|g"             /etc/ldap/ldap.conf
-  sed -i "s|{{ LDAP_ROOT_PW }}|${LDAP_ROOT_PW}|g"             /etc/ldap/ldap.conf
-  sed -i "s|{{ LDAP_SOURCE_SUFFIX }}|${LDAP_SOURCE_SUFFIX}|g" /etc/ldap/ldap.conf
-  sed -i "s|{{ LDAP_TARGET_SUFFIX }}|${LDAP_TARGET_SUFFIX}|g" /etc/ldap/ldap.conf
-  sed -i "s|{{ LDAP_BIND_URI }}|${LDAP_BIND_URI}|g"           /etc/ldap/ldap.conf
-  sed -i "s|{{ LDAP_BIND_DN }}|${LDAP_BIND_DN}|g"             /etc/ldap/ldap.conf
-  sed -i "s|{{ LDAP_BIND_PW }}|${LDAP_BIND_PW}|g"             /etc/ldap/ldap.conf
+  sed -i "s|{{ LDAP_ADMIN_DN }}|${LDAP_ADMIN_DN}|g"         /etc/ldap/ldap.conf
+  sed -i "s|{{ LDAP_ADMIN_PW }}|${LDAP_ADMIN_PW}|g"         /etc/ldap/ldap.conf
+  sed -i "s|{{ LDAP_PROXY_SOURCE }}|${LDAP_PROXY_SOURCE}|g" /etc/ldap/ldap.conf
+  sed -i "s|{{ LDAP_PROXY_TARGET }}|${LDAP_PROXY_TARGET}|g" /etc/ldap/ldap.conf
+  sed -i "s|{{ LDAP_PROXY_URI }}|${LDAP_PROXY_URI}|g"       /etc/ldap/ldap.conf
+  sed -i "s|{{ LDAP_PROXY_DN }}|${LDAP_PROXY_DN}|g"         /etc/ldap/ldap.conf
+  sed -i "s|{{ LDAP_PROXY_PW }}|${LDAP_PROXY_PW}|g"         /etc/ldap/ldap.conf
 
   ##### run scripts  #####
   echo "========================================================================"
