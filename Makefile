@@ -1,5 +1,5 @@
-NAME     = baselibrary/ldap-proxy
-REPO     = git@github.com:baselibrary/docker-ldap-proxy.git
+NAME     = baselibrary/slapd
+REPO     = git@github.com:baselibrary/docker-slapd.git
 REGISTRY = thoughtworks.io
 TAG      = 1.0.0
 
