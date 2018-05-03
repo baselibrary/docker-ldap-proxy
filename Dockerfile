@@ -8,4 +8,4 @@ EXPOSE 389 636
 
 VOLUME ["/var/lib/slapd"]
 
-CMD ["slapd", "-d", "256", "-f", "/etc/ldap/slapd.d"]
+CMD ["slapd", "-d", "256", "-F", "/etc/ldap/slapd.d"]
